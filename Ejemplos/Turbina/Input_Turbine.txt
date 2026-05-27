@@ -1,0 +1,46 @@
+PIPE
+diameter 5.49
+thickness 0.02
+wave_speed 1250.
+friction_coefficient 0.013
+length 125.
+no_flow False
+
+OUTPUT
+output_file output_turbine.txt
+nbr_of_els 50
+time_step 0.1
+output_frequency 1
+simulation_time 0.5
+
+DEVICES
+none
+
+UPSTREAM_BOUNDARY_CONDITION
+reservoir
+
+DOWNSTREAM_BOUNDARY_CONDITION
+turbine
+
+RESERVOIR
+water_level 78.74
+
+TURBINE
+nominal_head 82.00
+nominal_discharge 114.00
+nominal_speed 200.00
+nominal_torque 4114150.
+initial_power 61.7				!!(MW)
+power_variation -16.9				!!(MW)
+start_time 0.0
+end_time 0.1
+weight 1.47E+06			!!weight*(gyration_radius)**2 = 1.47E+07
+gyration_radius 10.0
+dashpot_time_constant 3.7
+speed_servomotor_ratio 0.325
+sigma 0.0
+delta 0.18
+dimensionless_data TurbineDimensionlessData.txt
+dy 0.2
+zero_theta_line 9
+dtheta 1.
