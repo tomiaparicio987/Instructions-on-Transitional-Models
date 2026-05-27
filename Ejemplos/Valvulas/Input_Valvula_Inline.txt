@@ -1,0 +1,35 @@
+PIPE
+diameter 0.5
+thickness 0.02
+wave_speed 1200
+friction_coefficient 0.018
+length 600.
+no_flow False
+
+OUTPUT
+output_file output_valvula_media.txt
+nbr_of_els 50
+time_step 0.000833
+output_frequency 10
+simulation_time 4.3
+
+DEVICES
+valve 300.0
+
+UPSTREAM_BOUNDARY_CONDITION
+reservoir
+
+DOWNSTREAM_BOUNDARY_CONDITION
+tailwater
+
+RESERVOIR
+water_level 150.
+
+TAILWATER
+water_level 0.
+
+VALVE_INLINE
+valve_closing_start 1.0
+valve_closing_end 3.1
+valve_discharge_coefficient 0.046
+valve_closing_exponent 1.5
