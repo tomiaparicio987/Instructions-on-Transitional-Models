@@ -1,0 +1,41 @@
+PIPE
+diameter 0.5
+thickness 0.02
+wave_speed 1200
+friction_coefficient 0.018
+length 600.
+no_flow False
+
+OUTPUT
+output_file output_pump_startup.txt
+nbr_of_els 50
+time_step 0.1
+output_frequency 1
+simulation_time 5.
+
+DEVICES
+surge_tank 302.0
+
+UPSTREAM_BOUNDARY_CONDITION
+reservoir
+
+DOWNSTREAM_BOUNDARY_CONDITION
+valve
+
+RESERVOIR
+water_level 150.
+
+TAILWATER
+water_level 180.
+
+SURGE_TANK
+diameter 2.
+friction_coefficient 0.018
+loss_coefficient_for_positive_flow 8.5
+loss_coefficient_for_reverse_flow 8.5
+
+VALVE_END
+valve_closing_start 0.
+valve_closing_end 2.1
+valve_discharge_coefficient 0.046
+valve_closing_exponent 1.5
